@@ -93,6 +93,8 @@ class StaticFiles:
         """
         The ASGI entry point.
         """
+        import sys
+        print(scope, file=sys.stderr)
         assert scope["type"] == "http"
 
         if not self.config_checked:
